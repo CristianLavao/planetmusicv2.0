@@ -1,0 +1,34 @@
+++++++++++++++++++
+header("Content-Type: text/html;charset=utf-8");
+$db = new mysqli('localhost', 'root', '', 'db');
+$acentos = $db->query("SET NAMES 'utf8'");
+if($db->connect_error > 0)
+{
+    die('Unable to connect to database [' . $db->connect_error . ']');
+	
+}
+++++++++++++++++++
+
+
+
++++++++++++++++  INSERTAR DATOS +++++++++++
+mysqli_query($db,"INSERT INTO tabla (id_campo, campo) VALUES 
+(NULL, '$variable')") 
+or die(mysqli_error($db));
++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+++++++++++Consultar ++++++++++++++++++++++
+$sql = "SELECT * FROM tabla WHERE campo='$variable'";
+if(!$result = $db->query($sql)){
+  die('Hay un error corriendo en la consulta o datos no encontrados!!! [' . $db->error . ']');
+}
+while($row = $result->fetch_assoc()){
+			$ccampo1=stripslashes($row["campo1"]);
+			$ccampo2=stripslashes($row["campo2"]);
+			
+}
+++++++++++Consultar ++++++++++++++++++++++

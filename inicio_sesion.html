@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="Estilos.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="phplogin.php" target="_parent">
+  <table width="260" height="270" border="0">
+    <tr>
+      <th width="260"scope="row"><p><img src="img_iniciosesion.png" alt="" width="260" height="70" align="texttop" /></p>
+        <p>Usuario
+          <label for="textfield4"></label>
+        </p>
+        <p>
+          <input type="text" name="Usuario" id="Usuario" />
+        </p>
+        <p>Contraseña</p>
+        <p>
+          <label for="textfield5"></label>
+          <input type="text" name="contrasena" id="contrasena" />
+        </p>
+        <p>Rol</p>
+        <p>
+          <label for="rol"></label>
+          <select name="rol" id="rol">
+            <option value="Seleccionar:" selected="selected">Seleccionar:</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Usuario">Usuario</option>
+          </select>
+        </p>
+		<a href="registrar_usuario.php" target="_parent">Registrate</a>
+        <p>
+          <input type="submit" name="button" id="button" value="Ingresar" />
+      </p></th>
+    </tr> 
+  </table></form>
+
+</body>
+</html>
